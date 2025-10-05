@@ -1,0 +1,30 @@
+openapi: 3.0.1
+info:
+  title: User Service
+  version: 1.0.0
+paths:
+  /users:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                name:
+                  type: string
+              required:
+                - name
+              type: object
+        required: true
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: number
+                required:
+                  - id
+                type: object

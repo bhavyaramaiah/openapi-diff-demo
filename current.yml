@@ -1,0 +1,107 @@
+components:
+  schemas:
+    RootResponse:
+      type: object
+      properties:
+        branchAU:
+          type: string
+          example: "000012212000"
+          description: Branch AU identifier
+        properties:
+          type: object
+          properties:
+            customerDetail:
+              $ref: '#/components/schemas/CustomerDetail'
+            entityDetail:
+              $ref: '#/components/schemas/EntityDetail'
+            bankerDetail:
+              $ref: '#/components/schemas/BankerDetail'
+          description: Collection of customer, entity, and banker details
+
+    CustomerDetail:
+      type: object
+      properties:
+        firstName:
+          type: string
+          example: "MARTIN"
+          description: Customer's first name
+        lastName:
+          type: string
+          example: "CAMPBELL"
+          description: Customer's last name
+        fullName:
+          type: string
+          example: "RAY CAMPBELL"
+          description: Full name of the customer
+        ecn:
+          type: string
+          example: "133186421052215"
+          description: Electronic customer number
+        companyNumber:
+          type: string
+          example: "999"
+          description: Associated company number
+        prospectFlag:
+          type: boolean
+          example: true
+          description: Indicates if the customer is a prospect
+        authId:
+          type: string
+          example: "00001808731"
+          description: Authorization identifier for customer
+        customerPresent:
+          type: boolean
+          example: false
+          description: Whether the customer is present
+
+    EntityDetail:
+      type: object
+      properties:
+        businessName:
+          type: string
+          example: "Name Of Business"
+          description: Legal or trading name of the business
+        businessAddress:
+          type: string
+          example: "Address of Business"
+          description: Registered address of the business
+        businessType:
+          type: string
+          example: "Type"
+          description: Type or category of business
+        businessEcn:
+          type: string
+          example: "178875021054112"
+          description: Business electronic customer number
+        prospectFlag:
+          type: boolean
+          example: true
+          description: Indicates if the business is a prospect
+
+    BankerDetail:
+      type: object
+      properties:
+        bankerAU:
+          type: string
+          example: "1234"
+          description: AU code for the banker
+        bankerType:
+          type: string
+          example: "SBRM"
+          description: Type of banker (e.g., relationship manager)
+        bankerId:
+          type: string
+          example: "B1911"
+          description: Banker’s unique identifier
+        bankerEmployeeId:
+          type: string
+          example: "00000701669"
+          description: Employee ID of the banker
+        branchAU:
+          type: string
+          example: "000012212000"
+          description: Branch AU where banker operates
+        branchLocationId:
+          type: string
+          example: "06331"
+          description: Branch location ID
