@@ -3,6 +3,10 @@ components:
     RootResponse:
       type: object
       properties:
+        branchName:
+          type: string
+          example: "CA23"
+          description: Branch name identifier
         branchAU:
           type: string
           example: "000012212000"
@@ -34,7 +38,7 @@ components:
           example: "RAY CAMPBELL"
           description: Full name of the customer
         ecn:
-          type: string
+          type: number
           example: "133186421052215"
           description: Electronic customer number
         companyNumber:

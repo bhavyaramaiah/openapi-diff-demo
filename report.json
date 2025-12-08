@@ -1,0 +1,27 @@
+{
+  "fieldAdds": [
+    {
+      "path": "components.schemas.RootResponse.properties.branchAUD",
+      "newType": "object"
+    }
+  ],
+  "fieldRemoves": [
+    {
+      "path": "components.schemas.RootResponse.properties.branchName",
+      "oldType": "object"
+    },
+    {
+      "path": "components.schemas.RootResponse.properties.branchAU",
+      "oldType": "object"
+    }
+  ],
+  "typeChanges": [],
+  "typeKeywordChanges": [
+    {
+      "path": "components.schemas.CustomerDetail.properties.ecn.type",
+      "from": "number",
+      "to": "string",
+      "note": "Change in \"type\" keyword value"
+    }
+  ]
+}
